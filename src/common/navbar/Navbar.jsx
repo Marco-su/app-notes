@@ -1,23 +1,23 @@
-import { useDispatch } from "react-redux";
-import { activeCreateForm } from "../store/notes.reducer";
 import "./Navbar.css";
+import { useDispatch } from "react-redux";
+import { activeCreateForm } from "../../store/notes.reducer";
 
 const Navbar = () => {
   const dispatch = useDispatch();
 
   const active = () => {
-    dispatch(activeCreateForm());
+    dispatch(activeCreateForm(true));
   };
 
   return (
-    <div id="navbar" className="mb-4">
+    <nav id="navbar" className="mb-4">
       <div className="container">
         <span>Notes App</span>
         <button className="btn btn-success" onClick={active}>
-          Crear Nota
+          Create Note
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

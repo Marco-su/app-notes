@@ -1,0 +1,11 @@
+/*  */
+#footer {
+  background: var(--primary);
+  padding: 0.2rem 0;
+  text-align: center;
+}
+
+#footer p {
+  margin: 0.4rem;
+  font-size: 0.8rem;
+}

@@ -8,18 +8,18 @@ const data = {
   array: [
     {
       id: "1",
-      title: "Default Note",
-      description: "This is a note added by default.",
+      title: "Info",
+      description:
+        "This site was created using React.js, Redux, CSS3 and React Hook Form. The site is not connected to a database so the notes will be lost when the page is reloaded or closed.",
     },
   ],
-  update: {
-    id: null,
-    form: false,
-  },
+  updateId: "",
   createForm: false,
+  updateForm: false,
 };
 
 const ACTIVE_CREATE = "ACTIVE_CREATE";
+const ACTIVE_UPDATE = "ACTIVE_UPDATE";
 const CREATE_NOTE = "CREATE_NOTE";
 const SET_UPDATE_ID = "SET_UPDATE_ID";
 const UPDATE_NOTE = "UPDATE_NOTE";
@@ -32,7 +32,13 @@ export default function notesReducer(state = data, action) {
     case ACTIVE_CREATE:
       return {
         ...state,
-        createForm: true,
+        createForm: action.payload,
+      };
+
+    case ACTIVE_UPDATE:
+      return {
+        ...state,
+        updateForm: action.payload,
       };
 
     case CREATE_NOTE:
@@ -45,10 +51,7 @@ export default function notesReducer(state = data, action) {
     case SET_UPDATE_ID:
       return {
         ...state,
-        update: {
-          id: action.payload.id,
-          form: true,
-        },
+        updateId: action.payload,
       };
 
     case UPDATE_NOTE: {
@@ -83,9 +86,17 @@ export default function notesReducer(state = data, action) {
 
 //---------------------------ACTIONS
 
-export const activeCreateForm = () => (dispatch, getState) => {
+export const activeCreateForm = (active) => (dispatch, getState) => {
   dispatch({
     type: ACTIVE_CREATE,
+    payload: active,
+  });
+};
+
+export const activeUpdateForm = (active) => (dispatch, getState) => {
+  dispatch({
+    type: ACTIVE_UPDATE,
+    payload: active,
   });
 };
 
@@ -105,12 +116,12 @@ export const createNote = (noteDetails) => (dispatch, getState) => {
 export const setUpdateId = (id) => (dispatch, getState) => {
   dispatch({
     type: SET_UPDATE_ID,
-    payload: { id, form: true },
+    payload: id,
   });
 };
 
 export const updateNote = (noteDetails) => (dispatch, getState) => {
-  const { id } = getState().notes.update;
+  const id = getState().notes.updateId;
   const { title, description } = noteDetails;
   dispatch({
     type: UPDATE_NOTE,

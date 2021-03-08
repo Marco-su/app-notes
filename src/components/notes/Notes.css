@@ -1,11 +1,15 @@
 /*  */
+#notes-component {
+  flex-grow: 1;
+}
+
 #notes-container {
   display: flex;
   flex-wrap: wrap;
 }
 
 #notes-container .card {
-  width: 260px;
+  width: 270px;
   margin: 0.5rem;
 }
 
@@ -13,6 +17,7 @@
   background: var(--primary);
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #notes-container h2 {

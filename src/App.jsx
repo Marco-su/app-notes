@@ -1,11 +1,12 @@
+import "./App.css";
 import { Provider } from "react-redux";
 
-import "./App.css";
 import generateStore from "./store/store";
-import Navbar from "./common/Navbar";
-import CreateForm from "./components/CreateForm";
-import EditForm from "./components/EditForm";
-import Notes from "./components/Notes";
+import Navbar from "./common/navbar/Navbar";
+import CreateForm from "./components/createForm/CreateForm";
+import EditForm from "./components/editForm/EditForm";
+import Notes from "./components/notes/Notes";
+import Footer from "./common/footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Notes />
         <CreateForm />
         <EditForm />
+        <Footer />
       </Provider>
     </div>
   );

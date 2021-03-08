@@ -1,7 +1,18 @@
 :root {
   --primary: #d9ef9f;
+  --semi-dark: rgba(0, 0, 0, 0.5);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 textarea {
   resize: none;
+}
+
+.btn:focus {
+  box-shadow: none;
 }

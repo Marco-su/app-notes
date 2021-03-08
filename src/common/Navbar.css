@@ -1,0 +1,26 @@
+/*  */
+#navbar {
+  background: var(--primary);
+  width: 100%;
+  padding: 0.6rem 0;
+}
+
+#navbar div {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+#navbar span {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#navbar button {
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

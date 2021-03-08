@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div id="navbar" className="mb-4">
-      <div>
+      <div className="container">
         <span>Notes App</span>
         <button className="btn btn-success" onClick={active}>
           Crear Nota

@@ -15,21 +15,21 @@ const Notes = () => {
   };
 
   return (
-    <div className="container">
+    <div id="notes-container" className="container">
       {notes.map((item) => (
         <div className="card" key={item.id}>
-          <div className="card-header bg-dark">
-            <h2 className="text-white">{item.title}</h2>
+          <div className="card-header">
+            <h2>{item.title}</h2>
             <button className="btn btn-success" name={item.id} onClick={setId}>
               Edit
             </button>
           </div>
           <div className="card-body">
             <p>{item.description}</p>
+            <button className="btn btn-danger" name={item.id} onClick={delNote}>
+              Delete
+            </button>
           </div>
-          <button className="btn btn-danger" name={item.id} onClick={delNote}>
-            Delete
-          </button>
         </div>
       ))}
     </div>

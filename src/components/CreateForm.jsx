@@ -19,14 +19,15 @@ const CreateForm = () => {
     <div>
       <form onSubmit={create}>
         <input
-          className="form-control"
+          className="form-control mb-3"
           name="title"
           type="text"
           placeholder="Title"
           onChange={(e) => setData({ ...data, title: e.target.value })}
         />
         <textarea
-          className="form-control"
+          rows="4"
+          className="form-control mb-3"
           name="description"
           placeholder="Description"
           onChange={(e) => setData({ ...data, description: e.target.value })}

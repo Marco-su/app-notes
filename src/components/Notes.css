@@ -1,1 +1,45 @@
+/*  */
+#notes-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+#notes-container .card {
+  width: 260px;
+  margin: 0.5rem;
+}
+
+#notes-container .card-header {
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+#notes-container h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  flex-grow: 1;
+}
+
+#notes-container .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#notes-container .card-body p {
+  flex-grow: 1;
+}
+
+#notes-container .card-body button {
+  max-width: max-content;
+}
+
+@media screen and (max-width: 767px) {
+  #notes-container {
+    justify-content: space-evenly;
+  }
+  #notes-container .card {
+    width: 100%;
+  }
+}

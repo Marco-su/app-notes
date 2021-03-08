@@ -6,9 +6,6 @@
 }
 
 #navbar div {
-  width: 70%;
-  margin-right: auto;
-  margin-left: auto;
   display: flex;
   align-items: center;
 }

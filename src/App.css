@@ -1,3 +1,7 @@
 :root {
   --primary: #d9ef9f;
 }
+
+textarea {
+  resize: none;
+}

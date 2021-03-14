@@ -3,48 +3,48 @@
   flex-grow: 1;
 }
 
-#notes-container {
+#notes-component .notes-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-#notes-container .card {
+#notes-component .card {
   width: 270px;
   margin: 0.5rem;
 }
 
-#notes-container .card-header {
+#notes-component .card-header {
   background: var(--primary);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-#notes-container h2 {
+#notes-component h2 {
   font-size: 1.3rem;
   font-weight: bold;
   margin: 0;
   flex-grow: 1;
 }
 
-#notes-container .card-body {
+#notes-component .card-body {
   display: flex;
   flex-direction: column;
 }
 
-#notes-container .card-body p {
+#notes-component .card-body p {
   flex-grow: 1;
 }
 
-#notes-container .card-body button {
+#notes-component .card-body button {
   max-width: max-content;
 }
 
 @media screen and (max-width: 767px) {
-  #notes-container {
+  #notes-component .notes-container {
     justify-content: space-evenly;
   }
-  #notes-container .card {
+  #notes-component .card {
     width: 100%;
   }
 }

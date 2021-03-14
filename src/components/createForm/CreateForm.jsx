@@ -30,15 +30,11 @@ const CreateForm = () => {
     <>
       {activeForm ? (
         <div id="create-form-container">
-          <form onSubmit={handleSubmit(create)} id="create-form">
+          <form onSubmit={handleSubmit(create)} className="create-form">
             <div className="card">
               <div className="card-header">
                 <h2>Create new note</h2>
-                <button
-                  id="close-btn-create"
-                  className="btn"
-                  onClick={closeForm}
-                >
+                <button className="btn close-btn-create" onClick={closeForm}>
                   <i className="fas fa-times"></i>
                 </button>
               </div>

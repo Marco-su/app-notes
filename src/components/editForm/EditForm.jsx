@@ -31,11 +31,11 @@ const EditForm = () => {
     <>
       {activeForm ? (
         <div id="edit-form-container">
-          <form onSubmit={handleSubmit(update)} id="edit-form">
+          <form onSubmit={handleSubmit(update)} className="edit-form">
             <div className="card">
               <div className="card-header">
                 <h2>Edit Note</h2>
-                <button id="close-btn-edit" className="btn" onClick={closeForm}>
+                <button className="btn close-btn-edit" onClick={closeForm}>
                   <i className="fas fa-times"></i>
                 </button>
               </div>

@@ -11,7 +11,7 @@
   height: 100%;
 }
 
-#edit-form {
+#edit-form-container .edit-form {
   width: 700px;
   max-width: 95%;
 }
@@ -33,7 +33,7 @@
   margin: 0;
 }
 
-#close-btn-edit {
+#edit-form-container .close-btn-edit {
   display: flex;
   align-items: center;
   justify-content: center;

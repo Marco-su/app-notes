@@ -21,7 +21,7 @@ const Notes = () => {
 
   return (
     <div id="notes-component">
-      <div id="notes-container" className="container mb-4">
+      <div className="container mb-4 notes-container">
         {notes.map((item) => (
           <div className="card" key={item.id}>
             <div className="card-header">

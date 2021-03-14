@@ -11,7 +11,7 @@
   height: 100%;
 }
 
-#create-form {
+#create-form-container .create-form {
   width: 700px;
   max-width: 95%;
 }
@@ -33,7 +33,7 @@
   margin: 0;
 }
 
-#close-btn-create {
+#create-form-container .close-btn-create {
   display: flex;
   align-items: center;
   justify-content: center;

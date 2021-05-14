@@ -80,7 +80,7 @@ export default function notesReducer(state = data, action) {
     }
 
     default:
-      return data;
+      return state;
   }
 }
 
